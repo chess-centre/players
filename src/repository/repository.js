@@ -5,8 +5,6 @@ const repository = (db) => {
 
   const createPlayer = (player) => {
     return new Promise((resolve, reject) => {
-      if (!player) reject(new Error('Player is undefined'))
-
       const payload = {
         name: player.name,
         rating: player.rating,
@@ -25,7 +23,7 @@ const repository = (db) => {
   const getAllPlayers = () => {
     return new Promise((resolve, reject) => {
       const players = []
-      const cursor = collection.find({}, { title: 1, id: 1 })
+      const cursor = collection.find({})
       const addPlayer = (player) => {
         players.push(player)
       }

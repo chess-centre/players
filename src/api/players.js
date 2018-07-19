@@ -2,7 +2,7 @@
 const status = require('http-status')
 
 module.exports = (app, options) => {
-  const {repo} = options
+  const { repo } = options
 
   app.get('/players', (req, res, next) => {
     repo.getAllPlayers().then(players => {
@@ -17,8 +17,7 @@ module.exports = (app, options) => {
   })
 
   app.post('/players', (req, res, next) => {
-    console.log('POST PLAYER', req.body)
-    repo.createPlayer(req.body).then(player => {
+    repo.createPlayer(req.body.player).then(player => {
       res.status(status.OK).json(player)
     }).catch(next)
   })
