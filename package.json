@@ -14,7 +14,7 @@
   "scripts": {
     "test": "mocha -R spec src/**/*.spec.js",
     "start": "node src/index.js",
-    "lint": "standard --verbose | snazzy",
+    "lint": "standard --verbose --fix | snazzy",
     "node-debug": "DEBUG=express* node src/index.js",
     "chrome-debug": "node --debug-brk --inspect src/index.js"
   },
