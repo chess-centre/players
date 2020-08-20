@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matt-d-webb/chess-players.git"
+    "url": "git+https://github.com/Chess-Centre/chess-players.git"
   },
   "author": "Matthew D Webb",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matt-d-webb/chess-players/issues"
+    "url": "https://github.com/Chess-Centre/chess-players/issues"
   },
-  "homepage": "https://github.com/matt-d-webb/chess-players#readme",
+  "homepage": "https://github.com/Chess-Centre/chess-players#readme",
   "devDependencies": {
     "eslint": ">=4.18.2",
     "mocha": "^8.1.1",
