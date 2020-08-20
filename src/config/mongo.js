@@ -1,22 +1,17 @@
-const MongoClient = require('mongodb')
+const { MongoClient } = require('mongodb')
 
-const getMongoURL = (options) => {
-  const url = 'mongodb://localhost:27017/players'
-  return url
-}
+const dbName = 'players'
 
 const connect = (options, mediator) => {
-  mediator.once('boot.ready', () => {
-    MongoClient.connect(
-            getMongoURL(options), {
-              db: options.dbParameters(),
-              server: options.serverParameters()
-            }, (err, db) => {
-              if (err) {
-                mediator.emit('db.error', err)
-              }
-              mediator.emit('db.ready', db)
-            })
+  mediator.once('boot.ready', async () => {
+    const mongo = new MongoClient('mongodb://localhost:27017')
+
+    mongo.connect((err, client) => {
+      if (err) return mediator.emit('db.error', error)
+      const db = client.db(dbName)
+      console.log(db)
+      mediator.emit('db.ready', db)
+    })
   })
 }
 

@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const helmet = require('helmet')
-const api = require('../api/players').default
+const api = require('../api/players')
 
 const start = (options) => {
   return new Promise((resolve, reject) => {
