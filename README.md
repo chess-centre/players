@@ -24,4 +24,4 @@ Note: the intention is not to steal or abuse these great services, only enrich t
 
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-[AWS Lambda](https://aws.amazon.com/lambda/)
+
