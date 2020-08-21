@@ -16,7 +16,9 @@ Those tasks being:
  
 A seperate project which provides a public API for accessing this information will be written up independently and be freely available (depending on costs, this is a non-profit after all).
 
-Note: the intention is not to steal or abuse these great services, only enrich the profile data of a user of The Chess Centre. Running schedule cron jobs to attain this information monthly (or whenever the rating lists are published), will reduce load on these external services if players can access their data in their Chess Centre profiles.
+_**Note:** the intention is not to steal or abuse these great services, only enrich the profile data of a user of the Chess Centre._
+
+_For example running scheduled cron jobs to attain this information regularly i.e once per month which will reduce load on these external services allowing our community to access their data within their Chess Centre profiles._
 
 :heart: It is with love that was acknowledge these sources of information:
 * FIDE rating list - https://ratings.fide.com/download_lists.phtml
