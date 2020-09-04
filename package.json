@@ -1,22 +1,13 @@
 {
   "name": "chess-players",
   "version": "1.0.0",
-  "description": "RESTFul API Service for FIDE chess players",
+  "description": "Fide Player Download",
   "main": "index.js",
-  "standard": {
-    "env": [
-      "mocha"
-    ],
-    "ignore": [
-      "mock"
-    ]
-  },
   "scripts": {
     "test": "mocha -R spec src/**/*.spec.js",
-    "start": "node src/index.js",
-    "lint": "standard --verbose --fix | snazzy",
-    "node-debug": "DEBUG=express* node src/index.js",
-    "chrome-debug": "node --debug-brk --inspect src/index.js"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -29,21 +20,15 @@
   },
   "homepage": "https://github.com/Chess-Centre/chess-players#readme",
   "devDependencies": {
-    "eslint": ">=4.18.2",
-    "mocha": "^8.1.1",
-    "should": "^11.1.2",
-    "snazzy": "^6.0.0",
-    "standard": "^8.6.0",
-    "supertest": "^4.0.2"
+    "@types/node": "^14.6.4",
+    "prettier": "^2.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@types/adm-zip": "^0.4.33",
     "adm-zip": "^0.4.16",
-    "big-xml": "^1.0.0",
-    "body-parser": "^1.18.3",
-    "express": "^4.14.0",
-    "helmet": "^3.4.0",
-    "http-status": "^0.2.5",
-    "mongodb": "^3.6.0",
-    "morgan": "^1.7.0"
+    "big-xml": "^1.0.0"
   }
 }
