@@ -1,8 +1,22 @@
-# chess-players
-RESTFul API Service for FIDE chess players
+# Chess Players
 
-This project is set up to provide a clean API for extracting chess rating information for players.
+A utility for working with Fide chess player data.
 
-Disclaimer: this is not an officially endorsed API.
+```
+    (async () => {
+        const fide = new Fide();
+        const players = await fide.getPlayers();
+        
+        // now you have a full list of players!
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+        // example: grab top ten and format:
+        const topTen = players
+                        .sort((a: Player, b: Player) => b.rating - a.rating)
+                        .slice(0, 10)
+                        .reduce((players: any, player: Player) => 
+                            [...players, 
+                                { name: player.name, rating: player.rating, nationality: player.country }
+                            ], []);
+                            
+    })();
+```
