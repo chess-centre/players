@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+<p align="center">
+    <img
+      alt="The Chess Centre"
+      src="https://github.com/Chess-Centre/welcome/blob/master/img/bcc-dark-logo.png"
+      width="100"
+    />
+  <p align="center">
+      <a href="https://github.com/chess-centre/welcome/blob/master/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/chess-centre/welcome?style=flat">
+      </a>
+  </p>
+  <h1 align="center"> Chess Players </h1>
+</p>
+<p align="center">
+  <h3 align="center"> Utility for accessing chess player data </h3>
+</p>
+<br />
 
-You can use the [editor on GitHub](https://github.com/Chess-Centre/chess-players/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+```
+(async () => {
+    const fide = new Fide();
+    const players = await fide.getPlayers();
+    
+    // now you have a full list of players!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    // example: grab top ten and format:
+    const topTen = players
+                    .sort((a: Player, b: Player) => b.rating - a.rating)
+                    .slice(0, 10)
+                    .reduce((players: any, player: Player) => 
+                        [...players, 
+                            { name: player.name, rating: player.rating, nationality: player.country }
+                        ], []);
+                        
+})();
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<p align="center">
+    <img
+      alt="example"
+      src="https://github.com/chess-centre/chess-players/blob/refactor/rewrite-fide-download-service/src/img/example.png"
+      width="752"
+    />
+</p>
 
-### Jekyll Themes
+## Memorized (cached calls)
+```
+import Fide, { Player } from './fide';
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Chess-Centre/chess-players/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+(async () => {
+  const fide = new Fide();
+  console.time('players');
+  const players = await fide.getPlayers();
+  console.timeEnd('players');
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  console.time('players-memoized');
+  await fide.getPlayers();
+  console.timeEnd('players-memoized');
+})();
+```
