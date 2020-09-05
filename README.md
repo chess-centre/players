@@ -39,7 +39,7 @@
     <img
       alt="example"
       src="https://github.com/chess-centre/chess-players/blob/refactor/rewrite-fide-download-service/src/img/example.png"
-      width="600"
+      width="752"
     />
 </p>
 

@@ -2,11 +2,8 @@ import Fide, { Player } from './fide';
 
 (async () => {
   const fide = new Fide();
-  console.time('players');
-  const players = await fide.getPlayers();
-  console.timeEnd('players');
 
-  // Now you have a list of players, in JSON!
+  const players = await fide.getPlayers();
 
   // example:
   const topTen = players
@@ -17,10 +14,4 @@ import Fide, { Player } from './fide';
       [],
     );
 
-  console.log(topTen);
-
-  // `getPlayers` is memoized
-  console.time('players-memoized');
-  await fide.getPlayers();
-  console.timeEnd('players-memoized');
 })();
