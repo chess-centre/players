@@ -4,9 +4,9 @@
   "description": "Fide Player Download",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec src/**/*.spec.js",
+    "test": "echo todo",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
   "repository": {
@@ -32,7 +32,6 @@
     "adm-zip": "^0.4.16",
     "axios": "^0.20.0",
     "decko": "^1.2.0",
-    "fast-xml-parser": "^3.17.4",
-    "xml-stream": "^0.4.5"
+    "fast-xml-parser": "^3.17.4"
   }
 }
