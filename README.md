@@ -58,3 +58,4 @@ import Fide, { Player } from './fide';
   console.timeEnd('players-memoized');
 })();
 ```
+
