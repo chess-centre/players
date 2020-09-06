@@ -19,7 +19,7 @@
 ## Examples
 ### Full list
 
-```
+```javascript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -41,7 +41,7 @@ import Fide, { Player } from './fide';
 
 ### Top players
 
-```
+```javascript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -72,7 +72,7 @@ import Fide, { Player } from './fide';
 
 ### Specific player
 
-```
+```javascript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -96,7 +96,7 @@ import Fide, { Player } from './fide';
 
 ### Legacy lists
 
-```
+```javascript
 import Fide, { Player, Options } from './fide';
 
 (async () => {
@@ -113,7 +113,7 @@ import Fide, { Player, Options } from './fide';
 
 ### Memoized (cached API calls)
 
-```
+```javascript
 import Fide from './fide';
 
 (async () => {
