@@ -8,6 +8,8 @@
       <a href="https://github.com/chess-centre/welcome/blob/master/LICENSE">
         <img alt="GitHub" src="https://img.shields.io/github/license/chess-centre/welcome?style=flat">
       </a>
+      <a href='https://coveralls.io/github/chess-centre/chess-players?branch=master'><img src='https://coveralls.io/repos/github/chess-centre/chess-players/badge.svg?branch=master' alt='Coverage Status' />
+      </a>
   </p>
   <h1 align="center"> Chess Players </h1>
 </p>
