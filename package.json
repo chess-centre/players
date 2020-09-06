@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/Chess-Centre/chess-players.git"
   },
-  "author": "Matthew D Webb",
+  "author": "matt-d-webb <matt.d.webb@icloud.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Chess-Centre/chess-players/issues"
@@ -48,6 +48,6 @@
     "fast-xml-parser": "^3.17.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@chess-centre"
   }
 }
