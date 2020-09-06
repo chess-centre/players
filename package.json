@@ -46,5 +46,8 @@
     "axios": "^0.20.0",
     "decko": "^1.2.0",
     "fast-xml-parser": "^3.17.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
