@@ -18,7 +18,7 @@
 ## Examples
 ### Full list
 
-```javascript
+```typescript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -38,7 +38,7 @@ import Fide, { Player } from './fide';
 
 ### Top players
 
-```javascript
+```typescript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -67,7 +67,7 @@ import Fide, { Player } from './fide';
 
 ### Specific player
 
-```javascript
+```typescript
 import Fide, { Player } from './fide';
 
 (async () => {
@@ -89,7 +89,7 @@ import Fide, { Player } from './fide';
 
 ### Legacy lists
 
-```javascript
+```typescript
 import Fide, { Player, Options } from './fide';
 
 (async () => {
@@ -106,7 +106,7 @@ import Fide, { Player, Options } from './fide';
 
 ### Memoized (cached API calls)
 
-```javascript
+```typescript
 import Fide from './fide';
 
 (async () => {
