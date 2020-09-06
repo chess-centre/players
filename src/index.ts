@@ -1,3 +1,3 @@
-import Fide from './fide';
+import Fide, { Player } from './fide';
 
  export default Fide;

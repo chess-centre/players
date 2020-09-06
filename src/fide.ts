@@ -35,7 +35,6 @@ export default class Fide {
   #url: string = 'http://ratings.fide.com/download/standard_rating_list_xml.zip';
 
   private constructUrl({ ratingType, month, year }: Options) {
-    if(year < 2015 || (year === 2015 && month === "Jan")) throw new Error("The rating list does not go back this far!");
     return `http://ratings.fide.com/download/${ratingType}_${month}${year - 2000}frl_xml.zip`;
   }
 
@@ -53,11 +52,7 @@ export default class Fide {
 
   @memoize
   public async getPreviousPlayersList(options: Options): Promise<any> {
-    try {
       const url = this.constructUrl(options);
       return this.getPlayers(url);
-    } catch (error) {
-      throw new Error(error.message);
-    }
   }
 }
