@@ -17,7 +17,7 @@
   <h3 align="center"> Utility for accessing chess player data </h3>
 </p>
 
-## Examples
+## Examples (typescript)
 ### Full list
 
 ```typescript
