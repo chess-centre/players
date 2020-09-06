@@ -14,7 +14,6 @@
 <p align="center">
   <h3 align="center"> Utility for accessing chess player data </h3>
 </p>
-<br />
 
 ## Examples
 ### Full list
@@ -26,9 +25,7 @@ import Fide, { Player } from './fide';
   const fide = new Fide();
   const players: Array<Player> = await fide.getPlayers();
 
-  console.log("===============================");
   console.log(`Players: ${players.length}`);
-  console.log("===============================");
 })();
 ```
 
@@ -57,9 +54,7 @@ import Fide, { Player } from './fide';
       [],
     );
 
-  console.log("===============================");
   console.log(topTen);
-  console.log("===============================");
 })();
 ```
 
@@ -81,9 +76,7 @@ import Fide, { Player } from './fide';
 
   const player = players.find(player => player.fideid === 418250)
 
-  console.log("===============================");
   console.log(player);
-  console.log("===============================");
 })();
 ```
 
@@ -118,7 +111,6 @@ import Fide from './fide';
 
 (async () => {
   const fide = new Fide();
-  console.log("===============================");
   console.time('players');
   await fide.getPlayers();
   console.timeEnd('players');
@@ -126,7 +118,6 @@ import Fide from './fide';
   console.time('players-memoized');
   await fide.getPlayers();
   console.timeEnd('players-memoized');
-  console.log("===============================");
 })();
 ```
 
@@ -136,4 +127,8 @@ import Fide from './fide';
       src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-memoized.png"
     />
 </p>
+
+### License
+
+[MIT]('/../LICENSE)
 
