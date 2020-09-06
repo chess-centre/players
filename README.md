@@ -1,7 +1,7 @@
 <p align="center">
     <img
       alt="The Chess Centre"
-      src="https://github.com/Chess-Centre/welcome/blob/master/img/bcc-dark-logo.png"
+      src="https://github.com/Chess-Centre/welcome/blob/master/img/bcc-dark-logo.png?raw=true"
       width="100"
     />
   <p align="center">
@@ -32,7 +32,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player count"
-      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-count.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-count.png?raw=true"
     />
 </p>
 
@@ -61,7 +61,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player top ten"
-      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-top-ten.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-top-ten.png?raw=true"
     />
 </p>
 
@@ -83,7 +83,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player top ten"
-      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player.png?raw=true"
     />
 </p>
 
@@ -124,7 +124,7 @@ import Fide from './fide';
 <p align="center">
     <img
       alt="player memoized"
-      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-memoized.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-memoized.png?raw=true"
     />
 </p>
 
