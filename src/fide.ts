@@ -5,7 +5,7 @@ import * as parser from 'fast-xml-parser';
 
 interface Playerslist {
   playerslist: {
-    player: T<Player>;
+    player: Array<Player>;
   };
 }
 
