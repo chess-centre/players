@@ -35,7 +35,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player count"
-      src="https://github.com/chess-centre/chess-players/blob/master/rewrite-fide-download-service/src/img/player-count.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-count.png"
     />
 </p>
 
@@ -66,7 +66,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player top ten"
-      src="https://github.com/chess-centre/chess-players/blob/master/rewrite-fide-download-service/src/img/player-top-ten.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-top-ten.png"
     />
 </p>
 
@@ -90,7 +90,7 @@ import Fide, { Player } from './fide';
 <p align="center">
     <img
       alt="player top ten"
-      src="https://github.com/chess-centre/chess-players/blob/master/rewrite-fide-download-service/src/img/player.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player.png"
     />
 </p>
 
@@ -133,7 +133,7 @@ import Fide from './fide';
 <p align="center">
     <img
       alt="player memoized"
-      src="https://github.com/chess-centre/chess-players/blob/master/rewrite-fide-download-service/src/img/player-memoized.png"
+      src="https://github.com/chess-centre/chess-players/blob/master/src/img/player-memoized.png"
     />
 </p>
 
