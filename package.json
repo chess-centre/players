@@ -4,7 +4,7 @@
   "description": "Fide Player Download",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage && coveralls < coverage/lcov.info",
     "test:watch": "jest --coverage --watchAll",
     "build": "tsc",
     "build:watch": "onchange 'src/**/*.ts' -- npm run build",
@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/Chess-Centre/chess-players#readme",
   "devDependencies": {
-
     "@types/node": "^14.6.4",
     "@types/source-map-support": "^0.5.3",
+    "coveralls": "^3.1.0",
     "jest": "^26.4.2",
     "onchange": "^7.0.2",
     "prettier": "^2.1.1",
