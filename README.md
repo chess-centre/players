@@ -19,6 +19,27 @@
   <p align="center"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/chess-centre/chess-players"></p>
 </p>
 
+## Intro
+
+This NodeJS package is provided to help developers build applications or components which want to use the published chess player rating list data.
+
+An example of this would be a `React Component` which renders a players profile i.e., name, country, rating - where the component prop accepts the FIDE id from a REST endpoint you expose on your server.
+
+_This information is found here at the [FIDE](https://ratings.fide.com/download_lists.phtml) website._
+
+
+## Getting started
+
+```
+npm install chess-players
+```
+or 
+
+```
+yarn add chess-players
+```
+
+
 ## Examples (typescript)
 ### Full list
 
