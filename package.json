@@ -1,8 +1,8 @@
 {
   "name": "chess-players",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fide Player Download",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll",
@@ -26,7 +26,12 @@
   "devDependencies": {
     "@types/node": "^14.6.4",
     "@types/source-map-support": "^0.5.3",
+    "@types/jest": "^26.0.13",
+    "@types/adm-zip": "^0.4.33",
+    "@types/axios": "^0.14.0",
+    "@types/cli-table": "^0.3.0",
     "coveralls": "^3.1.0",
+    "decko": "^1.2.0",
     "jest": "^26.4.2",
     "onchange": "^7.0.2",
     "prettier": "^2.1.1",
@@ -38,16 +43,11 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@types/jest": "^26.0.13",
-    "@types/adm-zip": "^0.4.33",
-    "@types/axios": "^0.14.0",
-    "@types/cli-table": "^0.3.0",
     "adm-zip": "^0.4.16",
     "axios": "^0.20.0",
-    "decko": "^1.2.0",
     "fast-xml-parser": "^3.17.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@chess-centre"
+    "access": "public"
   }
 }

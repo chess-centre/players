@@ -40,7 +40,9 @@ export default class Fide {
 
   @memoize
   public async getPlayers(url: string = this.#url): Promise<any> {
-    const response = await axios.get(url, { responseType: 'arraybuffer' });
+    const response = await axios.get(url, { responseType: 'arraybuffer',  headers: {
+      crossorigin: true
+    }});
     const zip = new AdmZip(response.data);
     const zipEntries = zip.getEntries();
     const xml = zipEntries[0].getData().toString();
