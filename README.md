@@ -16,6 +16,7 @@
 </p>
 <p align="center">
   <h3 align="center"> Utility for accessing chess player data </h3>
+  <p align="center"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/chess-centre/chess-players"></p>
 </p>
 
 ## Examples (typescript)
