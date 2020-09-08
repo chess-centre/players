@@ -20,25 +20,26 @@ jest.mock('fast-xml-parser');
 
 const MockedAxios = axios as jest.Mocked<typeof axios>;
 const MockedParser = parser as jest.Mocked<typeof parser>;
-MockedAxios.get.mockResolvedValue({ data: {} });
+MockedAxios.get.mockResolvedValue({ data: 'file.zip' });
 MockedParser.parse.mockReturnValue(MockedData);
 
+// Because AdmZip is a constructor function:                                        
 AdmZip.prototype.getEntries = jest.fn().mockImplementation(() => ([
     {
-        getData: jest.fn().mockReturnValue('xml')
+        getData: jest.fn().mockReturnValue('file.xml')
     }
 ]));
 
 describe("Fide", () => {
-    describe('getPlayers', () => {
+    describe('getPlayers()', () => {
         it('fetches successfully data from FIDE website', async () => {
             const fide = new Fide();
             const players = await fide.getPlayers();
             expect(players).toBe(MockedData.playerslist.player);
         });
-
     });
-    describe('getPreviousPlayersList', () => {
+                                         
+    describe('getPreviousPlayersList()', () => {
         it('fetches successfully legacy data from FIDE website', async () => {
             const fide = new Fide();
             const config = {
