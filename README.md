@@ -23,9 +23,32 @@
 
 This NodeJS package is provided to help developers build applications or components which want to use the published chess player rating list data.
 
-An example of this would be a `React Component` which renders a players profile i.e., name, country, rating - where the component prop accepts the FIDE id from a REST endpoint you expose on your server.
+_Note: This information is found here at the [FIDE](https://ratings.fide.com/download_lists.phtml) website._
 
-_This information is found here at the [FIDE](https://ratings.fide.com/download_lists.phtml) website._
+An example of this would be a `React` component which renders a players profile i.e., name, country, rating - where the component prop accepts the FIDE id from a REST endpoint you expose on your server.
+
+<details>
+<summary>Example React component</summary>
+
+```javascript
+import React, { useEffect, useState } from 'react';
+
+export default const PlayerProfile = fideId => {
+       
+       const [player, updatePlayer] = useState({ name: '', rating: '', country: ''});
+       const getPlayer = async () => updatePlayer(() => { ...await fetch(`/player/${fideId}'));
+       
+       useEffect(() => await getPlayer(), []);
+
+       return (<div>
+            <h1>Player Info</h1>
+            <div>Name: {player.name}</div>
+            <div>Rating: {player.rating}</div>
+            <div>Country: {player.country}</div>
+       </div>);
+}
+```
+</details>
 
 
 ## Getting started
@@ -50,7 +73,7 @@ import Fide, { Player } from './fide';
   const fide = new Fide();
   const players: Array<Player> = await fide.getPlayers();
 
-  console.log(`Players: ${players.length}`);
+  console.log(`Players: ${players.length}`); // OR res.send();
 })();
 ```
 
@@ -79,7 +102,7 @@ import Fide, { Player } from './fide';
       [],
     );
 
-  console.log(topTen);
+  console.log(topTen); // OR res.send();
 })();
 ```
 
@@ -101,7 +124,7 @@ import Fide, { Player } from './fide';
 
   const player = players.find(player => player.fideid === 418250)
 
-  console.log(player);
+  console.log(player); // OR res.send();
 })();
 ```
 
