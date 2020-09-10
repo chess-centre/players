@@ -21,31 +21,34 @@
 
 ## Intro
 
-This NodeJS package is provided to help developers build applications or components which want to use the published chess player rating list data.
+This NodeJS package is provided to help developers quickly build applications or components which want to use the published [FIDE](https://ratings.fide.com/download_lists.phtml) chess player rating list data.
 
-_Note: This information is found here at the [FIDE](https://ratings.fide.com/download_lists.phtml) website._
+### Use case
 
-An example of this would be a `React` component which renders a players profile i.e., name, country, rating - where the component prop accepts the FIDE id from a REST endpoint you expose on your server.
+An example of this would be a `React` component which renders a players profile `name` `country` `rating` where you would expose this data on your backend server, via a `REST` or `GraphQL` API.
+
+This might look something like this:
 
 ```javascript
 import React, { useEffect, useState } from 'react';
 
-export default const PlayerProfile = fideId => {
-       
-       const [player, updatePlayer] = useState({ name: '', rating: '', country: ''});
-       const getPlayer = async () => updatePlayer(() => { ...await fetch(`/player/${fideId}'));
+export default const PlayerProfile = props => {
+       const { id as FIDE_ID } = props;
+       const [player, updatePlayer] = useState({});
+       const getPlayer = async () => updatePlayer(() => { ...await fetch(`/player/${FIDE_ID}`));
        
        useEffect(() => await getPlayer(), []);
 
        return (<div>
-            <h1>Player Info</h1>
+            <h1>Fide Profile</h1>
             <div>Name: {player.name}</div>
             <div>Rating: {player.rating}</div>
             <div>Country: {player.country}</div>
        </div>);
 }
+// App.js -> <PlayerProfile id="123456" />
 ```
-[Demo](https://master.d3deu8tg7cyazb.amplifyapp.com/)
+[Sample](https://master.d3deu8tg7cyazb.amplifyapp.com/)
 
 
 ## Getting started
@@ -54,7 +57,6 @@ export default const PlayerProfile = fideId => {
 npm install chess-players
 ```
 or 
-
 ```
 yarn add chess-players
 ```
@@ -175,5 +177,5 @@ import Fide from './fide';
 
 ### License
 
-[MIT]('/../LICENSE)
+[MIT]('/../LICENSE) 
 
