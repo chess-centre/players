@@ -27,9 +27,6 @@ _Note: This information is found here at the [FIDE](https://ratings.fide.com/dow
 
 An example of this would be a `React` component which renders a players profile i.e., name, country, rating - where the component prop accepts the FIDE id from a REST endpoint you expose on your server.
 
-<details>
-<summary>Example React component</summary>
-
 ```javascript
 import React, { useEffect, useState } from 'react';
 
@@ -48,7 +45,7 @@ export default const PlayerProfile = fideId => {
        </div>);
 }
 ```
-</details>
+[Demo](https://master.d3deu8tg7cyazb.amplifyapp.com/)
 
 
 ## Getting started
