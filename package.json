@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "adm-zip": "^0.4.16",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "decko": "^1.2.0",
     "fast-xml-parser": "^3.17.4"
   },
