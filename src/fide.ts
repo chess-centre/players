@@ -12,17 +12,17 @@ export interface PlayersList {
 export interface Player {
   fideid: number;
   name: string;
-  country: string;
-  sex: string;
-  title: string;
-  w_title: string;
-  o_title: string;
-  foa_title: string;
-  rating: number;
-  games: number;
-  k: number;
-  birthday: number;
-  flag: string;
+  country?: string;
+  sex?: string;
+  title?: string;
+  w_title?: string;
+  o_title?: string;
+  foa_title?: string;
+  rating?: number;
+  games?: number;
+  k?: number;
+  birthday?: number;
+  flag?: string;
 }
 
 export interface Options {
@@ -40,15 +40,18 @@ export default class Fide {
 
   @memoize
   public async getPlayers(url: string = this.#url): Promise<any> {
+    console.log('🔜 Fetching remote player list.');
     const response = await axios.get(url, { responseType: 'arraybuffer',  headers: {
       crossorigin: true
     }});
+    console.log('🤐 Unzipping response data.')
     const zip = new AdmZip(response.data);
     const zipEntries = zip.getEntries();
     const xml = zipEntries[0].getData().toString();
     const {
       playerslist: { player },
     }: PlayersList = parser.parse(xml);
+    console.log('✅ Complete parsing of xml player data.');
     return player;
   }
 

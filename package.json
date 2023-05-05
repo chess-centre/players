@@ -1,6 +1,6 @@
 {
   "name": "chess-players",
-  "version": "1.0.2-alpha",
+  "version": "1.1.0",
   "description": "Fide Player Download",
   "main": "lib/index.js",
   "scripts": {
@@ -17,7 +17,11 @@
     "type": "git",
     "url": "git+https://github.com/Chess-Centre/chess-players.git"
   },
-  "keywords": ["chess", "players", "nodejs"],
+  "keywords": [
+    "chess",
+    "players",
+    "nodejs"
+  ],
   "author": "matt-d-webb <matt.d.webb@icloud.com>",
   "license": "MIT",
   "bugs": {
@@ -25,12 +29,12 @@
   },
   "homepage": "https://github.com/Chess-Centre/chess-players#readme",
   "devDependencies": {
-    "@types/node": "^14.6.4",
-    "@types/source-map-support": "^0.5.3",
-    "@types/jest": "^26.0.13",
     "@types/adm-zip": "^0.4.33",
     "@types/axios": "^0.14.0",
     "@types/cli-table": "^0.3.0",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.4",
+    "@types/source-map-support": "^0.5.3",
     "coveralls": "^3.1.0",
     "jest": "^26.4.2",
     "onchange": "^7.0.2",
@@ -43,8 +47,10 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.21.0",
     "adm-zip": "^0.4.16",
     "axios": "^0.21.1",
+    "cli-progress": "^3.12.0",
     "decko": "^1.2.0",
     "fast-xml-parser": "^3.17.4"
   },

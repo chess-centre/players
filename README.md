@@ -61,7 +61,6 @@ or
 yarn add chess-players
 ```
 
-
 ## Examples (typescript)
 ### Full list
 
