@@ -49,7 +49,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.21.0",
     "adm-zip": "^0.4.16",
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "cli-progress": "^3.12.0",
     "decko": "^1.2.0",
     "fast-xml-parser": "^4.2.4"
